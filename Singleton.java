@@ -16,8 +16,7 @@ public class Singleton {
      * Constructor bloqueado con private
      */
     private  Singleton() {}
-    private Singleton(){
-    }
+
 
     /**
      * Según exista o no ya el objeto, lo instanciamos o cambiamos los datos
