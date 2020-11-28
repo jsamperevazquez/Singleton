@@ -9,10 +9,34 @@ public class Singleton {
     private String nombre;
     private Integer edad;
 
+    // Esta va a ser nuestra única instacia
+    private static Singleton instance = null;
+
     /**
      * Constructor bloqueado con private
      */
     private  Singleton() {}
+    private Singleton(){
+    }
+
+    /**
+     * Según exista o no ya el objeto, lo instanciamos o cambiamos los datos
+     *
+     * @return la instancia. Si no existe la crea primero
+     */
+
+    public static Singleton getInstance() {
+      // Compruebo si ya está creada
+        if (instance == null){
+            // Como no está creada, la creo
+            // desde aquí si que puedo acceder al constructor
+            // porque estoy en la misma clase
+            instance = new Singleton();
+        }
+        // devuelvo la instancia
+        return instance;
+    }
+
 
     /**
      * Edad de la persona
