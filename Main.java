@@ -8,7 +8,7 @@ public class Main {
 
 
         //Intento instanciar un objeto con el constructor privado
-        Singleton miUnicaInstancia = new Singleton();
+        // Singleton miUnicaInstancia = new Singleton();
         // esto es un error
         // Singleton miUnicaInstancia = new Singleton();
 
@@ -27,5 +27,10 @@ public class Main {
         // miUnicaInstancia y otraInstanciaSeraLaMisma son el mismo
         otraInstanciaSeraLaMisma.setEdad(34);
 
+
+
+        // Version 1.1 del programa con otra instancia
+        Singleton versionInstancia = Singleton.getInstance();
+        versionInstancia.setNombre("Version 1.1");
     }
 }
